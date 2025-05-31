@@ -25,6 +25,6 @@ variable "public_key" {
   type = string
 }
 resource "aws_key_pair" "example" {
-  key_name   = "devops"
+  key_name   = "devops1"
   public_key = var.public_key
 }
