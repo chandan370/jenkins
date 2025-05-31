@@ -18,13 +18,13 @@ resource "aws_instance" "app_server" {
   instance_type = "t2.micro"
 
   tags = {
-    Name = "machine1"
+    Name = "machine2"
   }
 }
 variable "public_key" {
   type = string
 }
 resource "aws_key_pair" "example" {
-  key_name   = "devops1"
+  key_name   = "devops2"
   public_key = var.public_key
 }
