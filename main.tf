@@ -21,3 +21,10 @@ resource "aws_instance" "app_server" {
     Name = "machine1"
   }
 }
+variable "public_key" {
+  type = string
+}
+resource "aws_key_pair" "example" {
+  key_name   = "devops"
+  public_key = var.public_key
+}
